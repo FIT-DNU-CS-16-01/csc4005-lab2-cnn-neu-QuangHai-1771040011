@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ### Windows
 ```bash
 python -m venv .venv
-.venv\Scriptsctivate
+.venv\Scripts\activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
@@ -68,23 +68,23 @@ Hỗ trợ các kiểu dữ liệu sau:
 
 Ví dụ:
 ```bash
-python -m src.train --data_dir /duong_dan/NEU-CLS.zip --model_name cnn_small --train_mode scratch
+python -m src.train --data_dir D:\VS_Code\Nam_3_Ky_3\Hoc_Sau\Tuan_3\NEU-CLS.zip --model_name cnn_small --train_mode scratch
 ```
 
 ## 5. Chạy baseline CNN from scratch
 ```bash
-python -m src.train   --data_dir /duong_dan/NEU-CLS.zip   --project csc4005-lab2-neu-cnn   --run_name cnn_small_baseline   --model_name cnn_small   --train_mode scratch   --optimizer adamw   --lr 0.001   --weight_decay 0.0001   --dropout 0.3   --epochs 20   --batch_size 32   --img_size 64   --patience 5   --augment   --use_wandb
+python -m src.train   --data_dir D:\VS_Code\Nam_3_Ky_3\Hoc_Sau\Tuan_3\NEU-CLS.zip   --project csc4005-lab2-neu-cnn   --run_name cnn_small_baseline   --model_name cnn_small   --train_mode scratch   --optimizer adamw   --lr 0.001   --weight_decay 0.0001   --dropout 0.3   --epochs 20   --batch_size 32   --img_size 64   --patience 5   --augment   --use_wandb
 ```
 
 ## 6. Chạy transfer learning
 Ví dụ với ResNet18:
 ```bash
-python -m src.train   --data_dir /duong_dan/NEU-CLS.zip   --project csc4005-lab2-neu-cnn   --run_name resnet18_transfer   --model_name resnet18   --train_mode transfer   --optimizer adamw   --lr 0.001   --weight_decay 0.0001   --dropout 0.3   --epochs 10   --batch_size 32   --img_size 128   --patience 3   --augment   --use_wandb
+python -m src.train   --data_dir D:\VS_Code\Nam_3_Ky_3\Hoc_Sau\Tuan_3\NEU-CLS.zip   --project csc4005-lab2-neu-cnn   --run_name resnet18_transfer   --model_name resnet18   --train_mode transfer   --optimizer adamw   --lr 0.001   --weight_decay 0.0001   --dropout 0.3   --epochs 10   --batch_size 32   --img_size 128   --patience 3   --augment   --use_wandb
 ```
 
 Muốn fine-tune cả backbone:
 ```bash
-python -m src.train   --data_dir /duong_dan/NEU-CLS.zip   --project csc4005-lab2-neu-cnn   --run_name resnet18_finetune   --model_name resnet18   --train_mode finetune   --optimizer adamw   --lr 0.0001   --weight_decay 0.0001   --dropout 0.3   --epochs 10   --batch_size 16   --img_size 128   --patience 3   --augment   --use_wandb
+python -m src.train   --data_dir D:\VS_Code\Nam_3_Ky_3\Hoc_Sau\Tuan_3\NEU-CLS.zip   --project csc4005-lab2-neu-cnn   --run_name resnet18_finetune   --model_name resnet18   --train_mode finetune   --optimizer adamw   --lr 0.0001   --weight_decay 0.0001   --dropout 0.3   --epochs 10   --batch_size 16   --img_size 128   --patience 3   --augment   --use_wandb
 ```
 
 ## 7. Output sau khi train
