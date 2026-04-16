@@ -3,7 +3,7 @@
 ## 1. Thông tin chung
 - Họ và tên: Bế Quang Hải
 - Lớp: KHMT 1701
-- Repo: 
+- Repo: https://github.com/FIT-DNU-CS-16-01/csc4005-lab1-neu-mlp-QuangHai-1771040011.git
 - W&B project: `csc4005-lab2-neu-cnn`
 - Link W&B dashboard: https://wandb.ai/quanghaia2005-samsung-electronics/csc4005-lab2-neu-cnn?nw=nwuserquanghaia2005
 
@@ -27,10 +27,10 @@ Mục tiêu: So sánh hiệu quả của **MLP baseline (Lab 1)**, **CNN from sc
 ### 3.1. MLP baseline từ Lab 1
 - **Model**: MLP (Multilayer Perceptron)
 - **Input**: Ảnh flatten thành vector
-- **Optimizer**: (ghi optimizer sử dụng)
-- **Learning rate**: 
-- **Epochs**: 
-- **Best validation accuracy**: 
+- **Optimizer**: adamw
+- **Learning rate**: 0.001
+- **Epochs**: 20
+- **Best validation accuracy**: 41.85%
 
 ### 3.2. CNN from scratch
 - **Model**: CNN-small
@@ -67,7 +67,7 @@ Mục tiêu: So sánh hiệu quả của **MLP baseline (Lab 1)**, **CNN from sc
 
 | Model | Train mode | Best Val Acc | Test Acc | Avg Epoch time (s) | Trainable Params | Nhận xét |
 |---|---|---:|---:|---:|---:|---|
-| MLP | scratch |  |  |  |  | (Chưa có dữ liệu từ Lab 1) |
+| MLP | scratch | 41.85% | 38.15% | N/A | N/A | Baseline Lab 1 - Kém nhất |
 | CNN-small | scratch | 97.41% | 97.41% | 4.63 | 32,614 | debug_run |
 | CNN-small | scratch | 94.44% | 94.81% | 4.54 | 32,614 | cnn_small_baseline |
 | ResNet18 | finetune | 100% | 100% | 49.33 | 11,179,590 | resnet18_finetune ✓ Best |
